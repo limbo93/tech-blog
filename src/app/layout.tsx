@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: `TechBlog.`,
   description: `Technical blog`,
-  metadataBase: new URL('https://acme.com'),
+  metadataBase: new URL('https://atechblog.vercel.app'),
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
