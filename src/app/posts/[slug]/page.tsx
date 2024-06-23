@@ -30,14 +30,13 @@ export default async function Post({ params }: Params) {
           />
           <PostBody content={content} />
 
-          {/* <div className="bg-black my-5">
+          <div className="bg-black">
             <AdBanner
               dataAdFormat="auto"
               dataFullWidthResponsive={true}
-              dataAdSlot="4284247248"
+              dataAdSlot="1858346619"
             />
-          </div> */}
-
+          </div>
         </article>
       </Container>
     </main>
