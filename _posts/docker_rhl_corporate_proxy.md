@@ -44,12 +44,17 @@ sudo dnf -y remove docker \
 
 ### Step 3: Enable Docker CE Repository
 ```
-sudo dnf config-manager --add-repo=https://download.docker.com/linux/rhel/docker-ce.repo
+sudo dnf config-manager \
+--add-repo=https://download.docker.com/linux/rhel/docker-ce.repo
 ```
 
 ### Step 4: Install the latest version
 ```
-sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo dnf install docker-ce \
+                 docker-ce-cli \
+                 containerd.io \
+                 docker-buildx-plugin \
+                 docker-compose-plugin
 ```
 
 ### Step 5: Enable Docker

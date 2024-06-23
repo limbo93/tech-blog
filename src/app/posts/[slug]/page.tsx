@@ -6,6 +6,7 @@ import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
+import AdBanner from "../../_components/ad-banner";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
@@ -28,6 +29,15 @@ export default async function Post({ params }: Params) {
             author={post.author}
           />
           <PostBody content={content} />
+
+          {/* <div className="bg-black my-5">
+            <AdBanner
+              dataAdFormat="auto"
+              dataFullWidthResponsive={true}
+              dataAdSlot="4284247248"
+            />
+          </div> */}
+
         </article>
       </Container>
     </main>

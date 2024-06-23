@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
+import AdSense from "./_components/ad-sense";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,6 +56,7 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <AdSense pId="ca-pub-9399955311231459" />
       </head>
       <body className={inter.className}>
         <div className="min-h-screen">{children}</div>
