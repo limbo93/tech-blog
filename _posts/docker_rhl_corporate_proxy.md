@@ -1,5 +1,7 @@
 ---
 title: "How to install docker on Red Hat Enterprise Linux 8"
+description: "Learn how to install Docker Engine on REHL 8. These instructions cover the installation method with corporate proxy, how to uninstall, and next steps."
+keywords: "requirements,dnf,installation,redhat,rehl 8,install,uninstall,docker,engine,upgrade,update"
 excerpt: "Docker is indeed a powerful tool for containerization, providing a lightweight and efficient way to package applications with their dependencies. Red Hat Enterprise Linux (RHEL) 8.7 (Ootpa) is a stable release that supports Docker installation. We will be using RHEL 8.7 (Ootpa) with x86_64 architecture for this setup."
 coverImage: "/assets/blog/docker-rhl-corporate-proxy/docker_rhl_corporate_proxy.jpg"
 date: "2024-06-23T05:35:07.322Z"
@@ -15,17 +17,17 @@ Docker is indeed a powerful tool for containerization, providing a lightweight a
 
 Red Hat Enterprise Linux (RHEL) 8.7 (Ootpa) is a stable release that supports Docker installation. We will be using RHEL 8.7 (Ootpa) with x86_64 architecture for this setup.
 
-![OS Info](/assets/blog/docker-rhl-corporate-proxy/enable_docker.png)
+![OS Info](/assets/blog/docker-rhl-corporate-proxy/os_info.jpeg)
 
 Setting up Docker on Red Hat Enterprise Linux (RHEL) when behind a corporate proxy can indeed be challenging due to the need to configure Docker to work with the proxy settings. Here's a detailed guide on how to set up Docker on RHEL 8.7 when using a corporate proxy.
 
 
 
 ### Step 1: Set Corporate Proxy to dnf
-Run `sudo vi /etc/dnf/dnf.conf` and add your corporate proxy as follows `proxy=http://proxy-ip:port`
+Run __sudo vi /etc/dnf/dnf.conf__ and add your corporate proxy as follows __proxy=http://proxy-ip:port__ (e.g proxy=http://192.168.40.10:8081)
 
 
-### Step 2: Uninstall any such older versions before attempting to install a new version, along with associated dependencies along with "Podman"
+### Step 2: Uninstall any such older versions before attempting to install a new version, along with associated dependencies along with __Podman__
 
 ```
 sudo dnf -y remove docker \
@@ -55,7 +57,7 @@ sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 sudo systemctl enable docker
 ```
 
-![Enable Docker](/assets/blog/docker-rhl-corporate-proxy/enable_docker.png)
+![Enable Docker](/assets/blog/docker-rhl-corporate-proxy/enable_docker.jpeg)
 
 ### Step 6: Start Docker
 ```
@@ -67,22 +69,23 @@ sudo systemctl start docker
 sudo systemctl status docker
 ```
 
-![Docker Status](/assets/blog/docker-rhl-corporate-proxy/docker_status.png)
+![Docker Status](/assets/blog/docker-rhl-corporate-proxy/docker_status.jpeg)
 
 ### Step 8: Verify Docker Installation
 ```
 docker --version
 ```
 
-![Docker Status](/assets/blog/docker-rhl-corporate-proxy/docker_version.png)
+![Docker Status](/assets/blog/docker-rhl-corporate-proxy/docker_version.jpeg)
 
 ### Step 9: Add Users to the Docker Group (Optional)
-If you want to avoid typing `sudo` whenever you run the docker command, add your username to the docker group
+If you want to avoid typing __sudo__ whenever you run the docker command, add your username to the docker group.
 ```
 sudo usermod -aG docker ${USER}
 ```
 
-Congratulations! Docker setup complete!
+
+__Congratulations!__ Docker setup complete!
 
 Installing Docker on Red Hat Enterprise Linux 8.7 (Ootpa) involves adding the Docker CE repository, installing Docker, starting the Docker service and optionally adding users to the Docker group for simplified command execution.
 
