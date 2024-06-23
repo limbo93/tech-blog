@@ -30,7 +30,7 @@ export default async function Post({ params }: Params) {
           />
           <PostBody content={content} />
 
-          <div className="bg-black">
+          <div className="bg-transparent">
             <AdBanner
               dataAdFormat="auto"
               dataFullWidthResponsive={true}
