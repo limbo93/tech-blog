@@ -1,7 +1,7 @@
 ---
 title: "How to install docker on Red Hat Enterprise Linux 8"
-description: "Learn how to install Docker Engine on REHL 8. These instructions cover the installation method with corporate proxy, how to uninstall, and next steps."
-keywords: "requirements,dnf,installation,redhat,rehl 8,install,uninstall,docker,engine,upgrade,update"
+description: "Learn how to install Docker Engine on REHL 8. These instructions cover the installation method with corporate proxy, and next steps."
+keywords: "requirements,dnf,installation,redhat,rehl 8,install,docker,engine,upgrade,update"
 excerpt: "Docker is indeed a powerful tool for containerization, providing a lightweight and efficient way to package applications with their dependencies. Red Hat Enterprise Linux (RHEL) 8.7 (Ootpa) is a stable release that supports Docker installation. We will be using RHEL 8.7 (Ootpa) with x86_64 architecture for this setup."
 coverImage: "/assets/blog/docker-rhl-corporate-proxy/docker_rhl_corporate_proxy.jpg"
 date: "2024-06-23T05:35:07.322Z"
