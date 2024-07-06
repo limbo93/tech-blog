@@ -2,7 +2,7 @@
 title: "How to setup docker swarm on AWS EC2"
 description: "Learn how to setup Docker Swarm on AWS EC2. These instructions cover the installation method with Amazon EC2 and next steps."
 keywords: "requirements,dnf,installation,redhat,rehl 9,install,docker,swarm,deploy,aws,ec2"
-excerpt: "Docker is indeed a powerful tool for containerization, providing a lightweight and efficient way to package applications with their dependencies. Red Hat Enterprise Linux (RHEL) is a stable release that supports Docker installation. We will be using RHEL 9.4 (Plow) with x86_64 architecture for this setup."
+excerpt: "Docker is a powerful tool for containerization; providing a lightweight and efficient way to package applications with their dependencies. Docker Swarm made deployment handy as it is easy to maintain and scale applications."
 coverImage: "/assets/blog/docker-swarm-ec2/docker_swarm_ec2.jpg"
 date: "2024-07-06T01:35:07.322Z"
 author:
